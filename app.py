@@ -17,7 +17,7 @@ port = int(os.getenv('PORT', '3000'))
 # our base route which just returns a string
 @app.route('/')
 def hello_world():
-    user = {'username': 'Microsoft'}
+    user = {'username': 'SUSE'}
     return render_template('index.html', title='Home', user=user)
 
 # start the app
