@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>{{ title }} - Microblog</title>
+        <title>Hello {{ user.username }}!</title>
         <style>
         body {
             background-color: white;
@@ -17,7 +17,11 @@
     <body>
         <center>
         <h1>Hello, {{ user.username }}!</h1>
-        <img src="{{ url_for('static', filename='geckos.jpg') }}" />
-        </center>
+        {% if user.username == "Microsoft" %}
+        <div style='position:relative; padding-bottom:calc(56.25% + 44px)'><iframe src='https://gfycat.com/ifr/DeliriousUnsungBluefintuna' frameborder='0' scrolling='no' width='60%' height='60%'  allowfullscreen></iframe></div><p> <a href="https://gfycat.com/deliriousunsungbluefintuna-jimmy-fallon-bill-gates">via Gfycat</a></p>
+        {% endif %}
+        {% if user.username == "SUSE" %}
+        <div style='position:relative; padding-bottom:calc(56.25% + 44px)'><iframe src="https://giphy.com/embed/UOkd0Zww3AAk8" width="60%" height="60%"  frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/chameleon-UOkd0Zww3AAk8">via GIPHY</a></p>        {% endif %}
+    </center>
     </body>
 </html>
