@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>{{ title }} - Microblog</title>
+        <style>
+        body {
+            background-color: white;
+            margin: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        h1 {
+            color:slategrey;
+        }
+        </style>
+    </head>
+    <body>
+        <center>
+        <h1>Hello, {{ user.username }}!</h1>
+        <img src="{{ url_for('static', filename='geckos.jpg') }}" />
+        </center>
+    </body>
+</html>
